@@ -291,6 +291,72 @@
   }
   .map-icon { font-size: 13px; }
 
+  /* ─── RE:SET INTRO ─── */
+  .reset-intro {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 48px;
+    margin-bottom: 28px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .reset-intro::before {
+    content: 'Re:SET';
+    position: absolute;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 140px;
+    font-weight: 700;
+    color: rgba(76,175,114,.04);
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+  .reset-title-wrap {
+    margin-bottom: 16px;
+    position: relative; z-index: 1;
+  }
+  .reset-big {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(48px, 7vw, 80px);
+    font-weight: 700;
+    color: var(--text-hi);
+    letter-spacing: -2px;
+    line-height: 1;
+  }
+  .reset-colon { color: var(--teal); }
+  .reset-quote {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--green);
+    margin-bottom: 20px;
+    position: relative; z-index: 1;
+  }
+  .reset-desc {
+    font-size: 14px;
+    line-height: 2;
+    color: var(--text-body);
+    position: relative; z-index: 1;
+  }
+  .reset-desc strong { color: var(--text-hi); font-weight: 600; }
+
+  /* ─── SET LETTER BADGE ─── */
+  .set-letter-badge {
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 24px; font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .set-badge-green { background: rgba(76,175,114,.18); color: var(--green); }
+  .set-badge-teal  { background: rgba(62,181,162,.18); color: var(--teal); }
+  .set-badge-lime  { background: rgba(127,201,122,.18); color: #7fc97a; }
+
   /* ─── VENUE ─── */
   .venue-header {
     background: var(--bg-card);
@@ -422,11 +488,27 @@
 <!-- CONCEPT -->
 <div class="sec">
   <p class="label">Program Concept</p>
-  <h2 class="title">Re:SET, <em>세 가지 치유의 언어</em></h2>
+  <h2 class="title">Re:SET이란 <em>무엇인가요?</em></h2>
+
+  <!-- Re:SET 설명 박스 -->
+  <div class="reset-intro">
+    <div class="reset-title-wrap">
+      <span class="reset-big"><span class="reset-colon">Re:</span>SET</span>
+    </div>
+    <div class="reset-quote">"일상의 피로와 스트레스를 초기화한다!"</div>
+    <p class="reset-desc">
+      Re:SET은 컴퓨터를 재시작하듯 몸과 마음을 <strong>처음 상태로 되돌린다</strong>는 의미입니다.<br>
+      동시에 <strong>S·E·T</strong> 세 가지 치유의 언어를 담고 있습니다 —<br>
+      자연 속에서 감각을 깨우고, 온전히 쉬고, 마음을 정돈하는 하루.
+    </p>
+  </div>
+
+  <!-- S·E·T 카드 -->
   <div class="set-grid">
     <div class="set-card">
       <div class="set-accent"></div>
       <div class="set-bg-letter">S</div>
+      <div class="set-letter-badge set-badge-green">S</div>
       <div class="set-tag">Sensory · 감각 치유</div>
       <h3>몸의 감각을 깨웁니다</h3>
       <p>걷기명상, 구름명상, 생태숲 체험 —<br>자연 속에서 오감을 열어두는 시간</p>
@@ -434,6 +516,7 @@
     <div class="set-card">
       <div class="set-accent"></div>
       <div class="set-bg-letter">E</div>
+      <div class="set-letter-badge set-badge-teal">E</div>
       <div class="set-tag">Ease · 쉼 치유</div>
       <h3>온전히 쉬어갑니다</h3>
       <p>테라피실, 신체치유실, 북카페 —<br>아무것도 하지 않아도 되는 자유로운 쉼</p>
@@ -441,6 +524,7 @@
     <div class="set-card">
       <div class="set-accent"></div>
       <div class="set-bg-letter">T</div>
+      <div class="set-letter-badge set-badge-lime">T</div>
       <div class="set-tag">Therapy · 마음 치유</div>
       <h3>마음을 정돈합니다</h3>
       <p>심리상담사와 함께하는 심리 안정 교육 —<br>일상으로 돌아가도 유지되는 회복력</p>
